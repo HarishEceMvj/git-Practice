@@ -1,9 +1,9 @@
 while True:
-    print("this script perform only additon and subtraction")
+    print("this script perform only addn and subtraction")
     selection = input("enter the selection")
         
 
-    if selection == addition:
+    if selection == addn:
         a = int(input("enter the number"))
         b = int(input("enter the number"))
         print("sum is ", a+b)
