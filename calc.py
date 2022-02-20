@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+"""created:02-20-2022 14:49:58, author:seraph★1001100, project:Calculator"""
+
 import sys
 
 
