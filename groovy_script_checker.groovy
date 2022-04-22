@@ -1,4 +1,9 @@
-def prepareVSASANDeployCCStage(testSetName) {
+pipeline {
+    agent any
+    stages {
+        stage('forced-merge-check') {
+            steps {
+                def prepareVSASANDeployCCStage(testSetName) {
   sh('''
           case "${testSetName}" in
              "vsa_smoke_san") echo "./deploy_vsa -d $VTRIDENT_DEPLOY -m block -p ${VSA_PASSWORD} ${VSA_SAN_APPLIANCE_NAMES} VSA"
@@ -8,6 +13,10 @@ def prepareVSASANDeployCCStage(testSetName) {
           esac
         sleep 900
   ''')
-}
 
 prepareVSASANDeployCCStage("vg_smoke_san").call()
+            }
+        }
+    }
+  }
+}
