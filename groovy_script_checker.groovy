@@ -14,6 +14,7 @@ pipeline {
 			}
 		}
 	}
+}
 	def prepareVSASANDeployCCStage(testSetName) {
   sh('''
           case "${testSetName}" in
@@ -25,4 +26,4 @@ pipeline {
         sleep 900
   ''')
   }
-}
+
