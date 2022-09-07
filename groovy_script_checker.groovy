@@ -12,6 +12,7 @@ pipeline {
                     catch (Exception e) {
         currentBuild.currentResult = 'FAILURE'
                  }
+                }
             }     
         }
     }
