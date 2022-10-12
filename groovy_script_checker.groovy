@@ -5,7 +5,7 @@ pipeline {
         stage('build_status_checker') {
             steps {
                 
-                sh 'echo ${env.BUILD_NUMBER}'
+                sh "echo ${env.BUILD_NUMBER}"
             } 
         }
     }
