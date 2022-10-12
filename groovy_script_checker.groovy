@@ -10,11 +10,6 @@ pipeline {
                 echo ${os.environ['check_env']}
                 '''
             } 
-            steps ("finish") {
-                sh'''
-            echo ${env.currentBuildStatus}
-            '''
-            }
         }
     }
 }
