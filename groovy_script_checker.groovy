@@ -10,6 +10,7 @@ pipeline {
                 echo ${env.BUILD_NUMBER}
                 echo ${env.CHECK_ENV}
                 '''
+                sh 'echo ${env.BUILD_NUMBER}'
             } 
         }
     }
