@@ -3,10 +3,18 @@ pipeline {
 
     stages {
         stage('build_status_checker') {
-            steps {
+            step {
                 
-                sh '''python3 jenkins_build_failure_manually_checker.py -n $number'''
-            }     
+                sh '''#!/bin/bash
+                python3 jenkins_build_failure_manually_checker.py -n $number
+                
+                '''
+            } 
+            step("finish") {
+                sh'''
+            echo ${env.currentBuildStatus}
+            '''
+            }
         }
     }
 }
