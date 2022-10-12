@@ -11,3 +11,4 @@ try:
     print(f'output is {out}')
 except Exception as e:
     print(f"error observed is : {e}")
+    os.environ['check_env'] = "fail"
