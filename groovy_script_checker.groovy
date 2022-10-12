@@ -5,7 +5,7 @@ pipeline {
         stage('build_status_checker') {
             steps {
                 
-                sh "echo ${env.BUILD_NUMBER}"
+                sh "python3 jenkins_build_failure_manually_checker.py -n $number"
             } 
         }
     }
