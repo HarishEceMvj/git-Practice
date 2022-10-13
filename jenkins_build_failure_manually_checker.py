@@ -9,7 +9,6 @@ args = parser.parse_args()
 try:
     out = 10 / int(args.value)
     print(f'output is {out}')
-    return 0
 except Exception as e:
-    print(f"error observed is : {e}")
-    return 1
+    print(f"ERROR")
+    
