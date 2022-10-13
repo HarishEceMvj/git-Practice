@@ -1,9 +1,10 @@
 node {
     stage('Stage') {
-        def result = sh (returnStdout: true, script: 'python3 jenkins_build_failure_manually_checker.py -n $number').trim()
-        echo "$result"
-        if (result == 'ERROR') {
-            currentBuild.currentResult = "FAILURE"
+        environment {
+        RESULT = sh (returnStdout: true, script: 'python3 jenkins_build_failure_manually_checker.py -n $number').trim()
         }
+        echo "${env.RESULT}"
+        
+       }
     }
 }
