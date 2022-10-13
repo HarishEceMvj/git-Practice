@@ -5,6 +5,5 @@ node {
         }
         echo "${env.RESULT}"
         
-       }
     }
 }
