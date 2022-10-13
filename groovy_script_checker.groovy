@@ -5,7 +5,7 @@ node {
     }
     stage('finish') {
         if ('error' in $result) {
-        currentBuild.result = 'FAILURE'
+        currentBuild.currentResult = 'FAILURE'
         }
     }
 }
