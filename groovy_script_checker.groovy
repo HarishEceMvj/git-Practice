@@ -4,7 +4,7 @@ node {
         echo "RESULT IS $result"
     }
     stage('finish') {
-        if ('error' in $result) {
+        if ($result == 'ERROR') {
         currentBuild.currentResult = 'FAILURE'
         }
     }
